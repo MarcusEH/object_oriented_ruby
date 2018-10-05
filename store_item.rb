@@ -8,47 +8,44 @@ pants = {name: 'jeans', color: 'blue', price: 50}
 
 class Hat
 
-  def initialize(name, color, price)
-    @name = name
-    @color = color
-    @price = price
+  def initialize(input_options)
+    @name = input_options[:name]
+    @color = input_options[:color]
+    @price = input_options[:price]
   end
 
   attr_reader :name, :color, :price
   attr_writer :color, :price
-  # def name
-  #   @name
-  # end
 
-  # def color
-  #   @color
-  # end
-
-  # def price
-  #   @price
-  # end
-
-  # def color=(input_color)
-  #   @color = input_color
-  # end
-
-  # def price=(input_price)
-  #   @price = input_price
-  # end
 
 end
 
-hat = Hat.new("baseball hat", "red", 20)
+#hat = Hat.new("baseball hat", "red", 20)
+hat1 = Hat.new({:name => 'baseball hat', :color => 'red', :price => 20})
+hat2 = Hat.new(name: 'cowboy hat', color: 'brown', price: 50)
+hat3 = Hat.new(name: 'hard hat', color: 'orange', price: 70)
 
-puts hat.name
+
+
+
+puts hat1.name
+puts hat1.color
+puts hat1.price 
+puts hat2.name
+puts hat2.color
+puts hat2.price
+puts hat3.name
+puts hat3.color
+puts hat3.price
+puts "*" * 50
 
 #puts hat.color
-hat.color = "blue"
-puts hat.color
+hat1.color = "blue"
+puts hat1.color
 
 #puts hat.price
-hat.price = 30
-puts hat.price
+hat1.price = 30
+puts hat1.price
 
 
 
