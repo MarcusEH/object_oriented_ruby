@@ -1,7 +1,9 @@
-hat = {:name => "baseball hat", :color => "red", :price => 20}
-shirt = {name: 'tee shirt', color: 'blue', price: '30'}
-pants = {name: 'jeans', color: 'blue', price: '50'}
+hat1 = {:name => "baseball hat", :color => "red", :price => 20}
+hat2 = {name: 'cowboy hat', color: 'brown', price: 50}
+shirt = {name: 'tee shirt', color: 'blue', price: 30}
+pants = {name: 'jeans', color: 'blue', price: 50}
 
+#p hat2[:price]
 #p hat[:name]
 
 class Hat
@@ -12,25 +14,27 @@ class Hat
     @price = price
   end
 
-  def name
-    @name
-  end
+  attr_reader :name, :color, :price
+  attr_writer :color, :price
+  # def name
+  #   @name
+  # end
 
-  def color
-    @color
-  end
+  # def color
+  #   @color
+  # end
 
-  def price
-    @price
-  end
+  # def price
+  #   @price
+  # end
 
-  def color=(input_color)
-    @color = input_color
-  end
+  # def color=(input_color)
+  #   @color = input_color
+  # end
 
-  def price=(input_price)
-    @price = input_price
-  end
+  # def price=(input_price)
+  #   @price = input_price
+  # end
 
 end
 
