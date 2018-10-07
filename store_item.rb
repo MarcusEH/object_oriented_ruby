@@ -20,10 +20,23 @@ class Hat
 
 end
 
+class BaseballHat < Hat
+  attr_reader :back
+  attr_writer :back
+  
+  def initialize(input_options)
+    super
+    @back = input_options[:back]
+
+  end
+
+end
+
 #hat = Hat.new("baseball hat", "red", 20)
 hat1 = Hat.new({:name => 'baseball hat', :color => 'red', :price => 20})
 hat2 = Hat.new(name: 'cowboy hat', color: 'brown', price: 50)
 hat3 = Hat.new(name: 'hard hat', color: 'orange', price: 70)
+baseballhat = BaseballHat.new({name: "bears", color: "blue", price: 20, back: "fitted"})
 
 
 
@@ -47,6 +60,8 @@ puts hat1.color
 hat1.price = 30
 puts hat1.price
 
+
+p baseballhat.back
 
 
 

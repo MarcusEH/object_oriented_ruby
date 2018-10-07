@@ -45,17 +45,23 @@ class Manager < Employee
     @employees.each do |employee|
       employee.active = false
     end
-
   end
+
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
 manager.print_info
 manager.send_report
+
+puts "*" * 50
 manager.give_all_raises
+puts "after giving all employees raises:"
 employee1.print_info
 employee2.print_info
+p manager
+puts "*" * 50
 manager.fire_all_employees
-puts "after firing employees"
+puts "after firing employees:"
 puts employee1.active
 puts employee2.active
+p manager
